@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CLIENTS>
+<queue topic="ProfileEdit" id="0" clientId="100001" >
+                <action value="mailplatform">
+                        <key name="userId" type="parameter" map="userId" value=""/>
+                        <key name="other0" type="parameter" map="firstName" value=""/>
+                        <key name="other1" type="parameter" map="lastName" value=""/>
+                        <key name="eventId" type="parameter" map="" value="44"/>
+                        <key name="BCC" type="parameter" map="" value="admin@35.236.154.164"/>
+                        <key name="CC" type="parameter" map="" value="admin@35.236.154.164"/>
+                </action>
+                <action value="restService" url="http://10.36.76.89" method="POST" >
+                        <key name="userId" type="parameter" map="userId" value=""/>
+                        <key name="firstName" type="parameter" map="firstName" value=""/>
+                        <key name="lastName" type="parameter" map="lastName" value=""/>
+                        <key name="city" type="parameter" map="city" value=""/>
+                        <key name="state" type="parameter" map="state" value=""/>
+                        <key name="country" type="parameter" map="country" value=""/>
+                        <key name="pincode" type="parameter" map="pincode" value=""/>
+                        <key name="emailId" type="parameter" map="emailId" value=""/>
+                        <key name="emailVerification" type="parameter" map="emailVerification" value=""/>
+                        <key name="phoneNumber" type="parameter" map="phoneNumber" value=""/>
+                        <key name="phoneNumberVerfication" type="parameter" map="phoneNumberVerfication" value=""/>
+                        <key name="completeStatus" type="parameter" map="completeStatus" value=""/>
+                        <key name="eventId" type="parameter" map="eventId" value=""/>
+                </action>
+                <!-- <action value="restService" url="http://10.36.76.89" method="POST" >
+                        <key name="userId" type="parameter" map="userId" value=""/>
+                        <key name="processId" type="parameter" map="" value="0"/>
+                </action>
+                <action value="soapService" url="http://10.36.76.123:8056/vin/mail"
+                                method="mailRequest" namespace="http://www.springwssample.org/types" >
+                        <key name="fromName" type="parameter" map="userId" value=""/>
+                        <key name="fromEmail" type="parameter" map="" value=""/>
+                        <key name="ccEmails" type="parameter" map="" value=""/>
+                        <key name="bccEmails" type="parameter" map="" value=""/>
+                        <key name="subject" type="parameter" map="" value=""/>
+                        <key name="bodyContent" type="parameter" map="" value=""/>
+                        <key name="msgType" type="parameter" map="" value=""/>
+                        <key name="template_id" type="parameter" map="" value=""/>
+                        <key name="event_id" type="parameter" map="" value=""/>
+                </action> -->
+</queue>
+<queue topic="ConnectionRequest" id="1" clientId="100002">
+                <action value="mailplatform">
+                        <key name="userId" type="parameter" map="requestTo" value=""/>
+                        <key name="other0" type="parameter" map="requestFrom" value=""/>
+                        <key name="other1" type="parameter" map="relationType" value=""/>
+                        <key name="eventId" type="parameter" map="" value="22"/>
+                        <key name="BCC" type="parameter" map="" value="admin@35.236.154.164"/>
+                        <key name="CC" type="parameter" map="" value="admin@35.236.154.164"/>
+                </action>
+                <action value="soapService" url="http://localhost:8056/vin/mail"
+                                method="mailRequest" namespace="http://www.springwssample.org/types" >
+                        <key name="fromName" type="parameter" map="requestTo" value=""/>
+                        <key name="fromEmail" type="parameter" map="requestTo" value=""/>
+                        <key name="ccEmails" type="parameter" map="" value="pranavarya99@gmail.com"/>
+                        <key name="bccEmails" type="parameter" map="" value="pranavarya99@gmail.com"/>
+                        <key name="subject" type="parameter" map="" value="Connection Request"/>
+                        <key name="bodyContent" type="parameter" map="" value="This is th email for connection request"/>
+                        <key name="msgType" type="parameter" map="" value="Text"/>
+                        <key name="template_id" type="parameter" map="" value="4"/>
+                        <key name="event_id" type="parameter" map="" value="6"/>
+                </action>
+        <!--    <action value="restService" url="http://10.36.76.89" method="POST" >
+                        <key name="userId" type="parameter" map="requestFrom" value=""/>
+                        <key name="processId" type="parameter" map="" value="0"/>
+                </action>
+                <action value="restService" url="http://10.36.76.123:8081/sling" method="POST" >
+                        <key name="userId" type="parameter" map="requestTo" value=""/>
+                        <key name="processId" type="parameter" map="" value="0"/>
+                        <key name="cursorId" type="parameter" map="" value="Helllo"/>
+                </action> -->
+</queue>
+<queue topic="ConnectionAccept" id="2" clientId="100007">
+                <action value="mailplatform" >
+                        <key name="userId" type="parameter" map="acceptBy" value=""/>
+                        <key name="other0" type="parameter" map="acceptFor" value=""/>
+                        <key name="eventId" type="parameter" map="" value="22"/>
+                        <key name="BCC" type="parameter" map="" value="admin@35.236.154.164"/>
+                        <key name="CC" type="parameter" map="" value="admin@35.236.154.164"/>
+                </action>
+</queue>
+<queue topic="SharedContent" id="3" clientId="100003" >
+                <action value="mailplatform">
+                        <key name="userId" type="parameter" map="ivities" value=""/>
+                        <key name="other0" type="parameter" map="userId" value=""/>
+                        <key name="other1" type="parameter" map="sharedURL" value=""/>
+                        <key name="other2" type="parameter" map="sharedMessage" value=""/>
+                        <key name="eventId" type="parameter" map="" value="22"/>
+                        <key name="BCC" type="parameter" map="" value="admin@35.236.154.164"/>
+                        <key name="CC" type="parameter" map="" value="admin@35.236.154.164"/>
+                </action>
+</queue>
+<queue topic="AccountMapped" id="4" clientId="100004" >
+                <action value="mailplatform">
+                        <key name="userId" type="parameter" map="userId" value=""/>
+                        <key name="other0" type="parameter" map="providerId" value=""/>
+                        <key name="other1" type="parameter" map="providerEmailId" value=""/>
+                        <key name="eventId" type="parameter" map="" value="22"/>
+                        <key name="BCC" type="parameter" map="" value="admin@35.236.154.164"/>
+                        <key name="CC" type="parameter" map="" value="admin@35.236.154.164"/>
+                </action>
+</queue>
+<queue topic="ExtractProfile" id="5" clientId="100005">
+                <action value="mailplatform" >
+                        <key name="userId" type="parameter" map="userId" value=""/>
+                        <key name="other0" type="parameter" map="providerId" value=""/>
+                        <key name="other1" type="parameter" map="providerEmailId" value=""/>
+                        <key name="eventId" type="parameter" map="" value="22"/>
+                        <key name="BCC" type="parameter" map="" value="admin@35.236.154.164"/>
+                        <key name="CC" type="parameter" map="" value="admin@35.236.154.164"/>
+                </action>
+</queue>
+<queue topic="UserCreationRave" id="6" clientId="100006">
+                <action value="mailplatform">
+                        <key name="userId" type="parameter" map="userId" value=""/>
+                        <key name="other0" type="parameter" map="emailId" value=""/>
+                        <key name="other1" type="parameter" map="name" value=""/>
+                        <key name="other2" type="parameter" map="password" value=""/>
+                        <key name="other3" type="parameter" map="mobileNumber" value=""/>
+                        <key name="other4" type="parameter" map="extension" value=""/>
+                        <key name="eventId" type="parameter" map="" value="44"/>
+                        <key name="BCC" type="parameter" map="" value="bizlemvivek@gmail.com"/>
+                        <key name="CC" type="parameter" map="" value="tripathi.vivekk@gmail.com"/>
+                </action>
+</queue>
+<queue topic="ofbiz" id="8" clientId="100008">
+                <action value="restService" url="http://10.36.76.123:8086/ServiceLogging/consumption" method="POST" >
+                        <key name="type" type="parameter" map="" value="activator"/>
+                        <key name="userId" type="parameter" map="customer_loginId" value=""/>
+                        <key name="serviceId" type="parameter" map="productId" value=""/>
+                        <key name="quantity" type="parameter" map="quantity" value=""/>
+                        <key name="name" type="parameter" map="customer_first_name" value=""/>
+                </action>
+</queue>
+<queue topic="mailsending2" id="9" clientId="100009">
+                <action value="phpService" url="http://10.36.76.128/webservice/consume_stompActivemq.php" method="POST" >
+                        <key name="topic" type="parameter" map="" value="mailsending2" />
+                        <key name="rquest" type="parameter" map="" value="consumeActiveMq" />
+                        <key name="action" type="parameter" map="" value="clientactionname" />
+                        <key name="messagebody" type="list" map="" value="">
+                                <messagebody name="to" type="parameter" map="to" value=""/>
+                                <messagebody name="from" type="parameter" map="from" value=""/>
+                                <messagebody name="subject" type="parameter" map="subject" value=""/>
+                                <messagebody name="message" type="parameter" map="message" value=""/>
+                        </key>
+                </action>
+</queue>
+<queue topic="ContentFeedback" id="10" clientId="100010">
+                <action value="mailplatform">
+                        <key name="userId" type="parameter" map="userId" value=""/>
+                        <key name="other0" type="parameter" map="contentPath" value=""/>
+                        <key name="other1" type="parameter" map="operation" value=""/>
+                        <key name="other2" type="parameter" map="value" value=""/>
+                        <key name="eventId" type="parameter" map="" value="62"/>
+                        <key name="BCC" type="parameter" map="" value="admin@35.236.154.164"/>
+                        <key name="CC" type="parameter" map="" value="admin@35.236.154.164"/>
+                </action>
+</queue>
+<queue topic="OrderInfo" id="11" clientId="100011">
+                <action value="restService" url="http://35.236.154.164:8078/ServiceLogging/consumption" method="POST" >
+                        <key name="type" type="parameter" map="" value="commitOrder" />
+                        <key name="userId" type="parameter" map="customerId" value="" />
+                        <key name="serviceId" type="parameter" map="productId" value="" />
+                        <key name="quantity" type="parameter" map="quantity" value="" />
+                        <key name="name" type="parameter" map="customerFName" value="" />
+                        <key name="attributes" type="parameter" map="attributes" value="" />
+                </action>
+                <action value="mailplatform">
+                        <key name="userId" type="parameter" map="customerId" value="" />
+                        <key name="other0" type="parameter" map="" value=""/>
+                        <key name="other1" type="parameter" map="" value=""/>
+                        <key name="other2" type="parameter" map="" value=""/>
+                        <key name="eventId" type="parameter" map="" value="45"/>
+                        <key name="BCC" type="parameter" map="" value=""/>
+                        <key name="CC" type="parameter" map="" value="bizlemvivek@gmail.com"/>
+                </action>
+
+</queue>
+<!--
+<queue topic="Vtiger" id="12" clientId="100012">
+                <action value="restService" url="http://54.225.114.173/helpdesk/createLead.php" method="POST" >
+                        <key name="type" type="parameter" map="" value="Vtiger" />
+                        <key name="firstname" type="parameter" map="firstname" value="" />
+                        <key name="lastname" type="parameter" map="lastname" value="" />
+                        <key name="company" type="parameter" map="company" value="" />
+                        <key name="number" type="parameter" map="number" value="" />
+                        <key name="weburl" type="parameter" map="weburl" value="" />
+                        <key name="email" type="parameter" map="email" value="" />
+                </action>
+
+</queue>
+-->
+<queue topic="Vtiger" id="12" clientId="100012">
+                <action value="restService" url="http://35.186.173.106/vtigercrm/webservice_for_opencart/createLead.php" method="POST" >
+                        <key name="type" type="parameter" map="" value="Vtiger" />
+                        <key name="firstname" type="parameter" map="firstname" value="" />
+                        <key name="lastname" type="parameter" map="lastname" value="" />
+                        <key name="company" type="parameter" map="company" value="" />
+                        <key name="number" type="parameter" map="number" value="" />
+                        <key name="weburl" type="parameter" map="weburl" value="" />
+                        <key name="email" type="parameter" map="email" value="" />
+                </action>
+
+</queue>
+                <queue topic="EventInvite" id="13" clientId="100013">
+                <action value="mailplatform">
+                        <key name="userId" type="parameter" map="customerId" value="" />
+                        <key name="other0" type="parameter" map="other0" value=""/>
+                        <key name="eventId" type="parameter" map="eventId" value=""/>
+                        <key name="BCC" type="parameter" map="" value=""/>
+                        <key name="CC" type="parameter" map="" value=""/>
+                </action>
+</queue>
+<!-- Below queqe Written by Akhilesh id no 14 15 16 17 18 19-->
+
+<queue topic="VtigerContact" id="14" clientId="100014">
+                <action value="restService" url="http://35.186.173.106/vtigercrm/webservice_for_opencart/createLead.php" method="POST" >
+                        <key name="type" type="parameter" map="" value="Vtiger" />
+                        <key name="firstname" type="parameter" map="firstname" value="" />
+                        <key name="lastname" type="parameter" map="lastname" value="" />
+                        <key name="company" type="parameter" map="company" value="" />
+                        <key name="number" type="parameter" map="number" value="" />
+                        <key name="weburl" type="parameter" map="weburl" value="" />
+                        <key name="email" type="parameter" map="email" value="" />
+                </action>
+
+</queue>
+<queue topic="VtigerService" id="15" clientId="100015">
+                <action value="restService" url="http://35.186.173.106/vtigercrm/webservice_for_opencart/createService.php" method="POST" >
+                        <key name="type" type="parameter" map="" value="VtigerService" />
+                        <key name="servicename" type="parameter" map="servicename" value="" />
+                        <key name="unit_price" type="parameter" map="unit_price" value="" />
+                        <key name="sales_start_date" type="parameter" map="sales_start_date" value="" />
+                        <key name="sales_end_date" type="parameter" map="sales_end_date" value="" />
+                        <key name="description" type="parameter" map="description" value="" />
+                </action>
+
+</queue>
+                <queue topic="CheckOutService" id="16" clientId="100016">
+                <action value="restService" url="http://35.186.173.106/vtigercrm/webservice_for_opencart/createInvoice.php" method="POST" >
+                        <key name="type" type="parameter" map="" value="CheckOutService" />
+                        <key name="servicename" type="parameter" map="servicename" value="" />
+                        <key name="contactname" type="parameter" map="contactname" value="" />
+                        <key name="lastname" type="parameter" map="lastname" value="" />
+                        <key name="email" type="parameter" map="email" value="" />
+                        <key name="organization" type="parameter" map="organization" value="" />
+                        <key name="unit_price" type="parameter" map="unit_price" value="" />
+                        <key name="sales_start_date" type="parameter" map="sales_start_date" value="" />
+                        <key name="sales_end_date" type="parameter" map="sales_end_date" value="" />
+                        <key name="description" type="parameter" map="description" value="" />
+                </action>
+
+</queue>
+<queue topic="CreateService" id="17" clientId="100017">
+                <action value="restService" url="http://35.186.173.106/vtigercrm/webservice_for_opencart/createService.php" method="POST" >
+                        <key name="type" type="parameter" map="" value="CreateService" />
+                        <key name="servicename" type="parameter" map="servicename" value="" />
+                        <key name="quantity" type="parameter" map="quantity" value="" />
+                        <key name="price" type="parameter" map="price" value="" />
+                        <key name="description" type="parameter" map="description" value="" />
+                </action>
+
+</queue>
+<queue topic="UpdateService" id="18" clientId="100018">
+                <action value="restService" url="http://35.186.173.106/vtigercrm/webservice_for_opencart/updateService.php" method="POST" >
+                        <key name="type" type="parameter" map="" value="UpdateService" />
+                        <key name="servicename" type="parameter" map="servicename" value="" />
+                        <key name="quantity" type="parameter" map="quantity" value="" />
+                        <key name="price" type="parameter" map="price" value="" />
+                        <key name="description" type="parameter" map="description" value="" />
+                </action>
+
+</queue>
+<queue topic="DeleteService" id="19" clientId="100019">
+                <action value="restService" url="http://35.186.173.106/vtigercrm/webservice_for_opencart/deleteService.php" method="POST" >
+                        <key name="type" type="parameter" map="" value="DeleteService" />
+                        <key name="deleteservicelist" type="parameter" map="deleteservicelist" value="" />
+                </action>
+
+</queue>
+                </CLIENTS>
+                
